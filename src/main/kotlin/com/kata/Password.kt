@@ -12,7 +12,7 @@ value class Password private constructor(val value: String) {
             strength: PasswordStrength = PasswordStrength.Normal
         ): Either<List<PasswordError>, Password> {
             val errors: List<PasswordError> = strength.validateAllRulesFor(value)
-            return if (errors.isNotEmpty()) errors.left()
+            return if (errors.size > 1) errors.left()
             else Password(value).right()
         }
     }
