@@ -10,6 +10,9 @@ repositories {
 }
 
 dependencies {
+    implementation(platform("io.arrow-kt:arrow-stack:1.2.4"))
+    implementation("io.arrow-kt:arrow-core")
+    implementation("io.arrow-kt:arrow-fx-coroutines")
     testImplementation("io.kotest:kotest-runner-junit5:5.8.1")
 }
 

@@ -1,10 +1,19 @@
 package com.kata
 
+import arrow.core.Either
+import arrow.core.left
+import arrow.core.right
 
-
-class Password (private val typeValidation : Validation) {
-    fun isThePasswordValid() : Boolean{
-        return typeValidation.isTheValidPassword()
+@JvmInline
+value class Password private constructor(val value: String) {
+    companion object {
+        fun of(
+            value: String,
+            strength: PasswordStrength = PasswordStrength.Normal
+        ): Either<List<PasswordError>, Password> {
+            val errors: List<PasswordError> = strength.validateAllRulesFor(value)
+            return if (errors.isNotEmpty()) errors.left()
+            else Password(value).right()
+        }
     }
-
 }

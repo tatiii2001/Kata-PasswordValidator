@@ -4,23 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50f02f4d-07f5-456c-afba-558398a9deb7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/kata/Password.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/kata/Validation.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/kata/PasswordValidatorShould.kt" afterDir="false" />
+    <list default="true" id="50f02f4d-07f5-456c-afba-558398a9deb7" name="Changes" comment="changes">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/kata/PasswordError.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/kata/PasswordRule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/kata/PasswordStrength.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/kata/PasswordRuleShould.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/kata/PasswordShould.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/kata/Password.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/kata/Password.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/kata/Validation.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/kata/PasswordValidatorShould.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +29,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -48,11 +45,23 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="withComposition" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -66,26 +75,66 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.Build Kata-PasswordValidator.executor": "Run",
+    "Gradle.MessageWrongPassword.executor": "Run",
+    "Gradle.PasswordRuleShould (1).executor": "Run",
+    "Gradle.PasswordRuleShould.executor": "Run",
+    "Gradle.PasswordShould (1).executor": "Run",
+    "Gradle.PasswordShould.executor": "Run",
     "Gradle.PasswordValidatorShould (1).executor": "Run",
     "Gradle.PasswordValidatorShould.executor": "Run",
+    "Kotest.MessageWrongPassword: return error the minimum length is incorrect.executor": "Run",
+    "Kotest.PasswordRuleShould: contains at least a lowercase rule.executor": "Run",
+    "Kotest.PasswordRuleShould: contains at least a underscore rule (1).executor": "Run",
+    "Kotest.PasswordRuleShould: contains at least a underscore rule.executor": "Run",
+    "Kotest.PasswordRuleShould: fail when it hasn't at least one digit.executor": "Run",
+    "Kotest.PasswordRuleShould: fail when it hasn't at least one lowercase letter.executor": "Run",
+    "Kotest.PasswordRuleShould: fail when it hasn't at least one uppercase letter.executor": "Run",
+    "Kotest.PasswordRuleShould: fail when length is less than required (1).executor": "Run",
+    "Kotest.PasswordRuleShould: fail when length is less than required.executor": "Run",
+    "Kotest.PasswordRuleShould: require minimum length rule.executor": "Run",
+    "Kotest.PasswordRuleShould: validate password has at least one digit (1).executor": "Run",
+    "Kotest.PasswordRuleShould: validate password has at least one digit.executor": "Run",
+    "Kotest.PasswordRuleShould: validate password has at least one lowercase.executor": "Run",
+    "Kotest.PasswordRuleShould: validate password has at least one uppercase.executor": "Run",
+    "Kotest.PasswordShould: fail showing all errors when password is empty (1).executor": "Run",
+    "Kotest.PasswordShould: fail showing all errors when password is empty (2).executor": "Run",
+    "Kotest.PasswordShould: fail showing all errors when password is empty.executor": "Run",
+    "Kotest.PasswordShould: validate password is correct (1).executor": "Run",
+    "Kotest.PasswordShould: validate password is correct.executor": "Run",
     "Kotest.PasswordValidatorShould: all requirements are met.executor": "Debug",
+    "Kotest.PasswordValidatorShould: contains less than 6 characters (1).executor": "Run",
+    "Kotest.PasswordValidatorShould: contains less than 6 characters (2).executor": "Run",
+    "Kotest.PasswordValidatorShould: contains less than 6 characters (3).executor": "Debug",
+    "Kotest.PasswordValidatorShould: contains less than 6 characters (4).executor": "Run",
+    "Kotest.PasswordValidatorShould: contains less than 6 characters (5).executor": "Run",
+    "Kotest.PasswordValidatorShould: contains less than 6 characters.executor": "Run",
     "Kotest.PasswordValidatorShould: contains less than 8 characters (1).executor": "Run",
     "Kotest.PasswordValidatorShould: contains less than 8 characters.executor": "Run",
+    "Kotest.PasswordValidatorShould: don't contains a uppercase.executor": "Run",
     "Kotest.PasswordValidatorShould: return false if.executor": "Run",
     "Kotest.PasswordValidatorShould: return true if (1).executor": "Run",
     "Kotest.PasswordValidatorShould: return true if (2).executor": "Run",
     "Kotest.PasswordValidatorShould: return true if.executor": "Debug",
+    "Kotest.PasswordValidatorShould: when the validation level is high return false if.executor": "Run",
+    "Kotest.PasswordValidatorShould: when the validation level is high return true if (1).executor": "Run",
+    "Kotest.PasswordValidatorShould: when the validation level is high return true if.executor": "Run",
+    "Kotest.PasswordValidatorShould: when the validation level is low return false if (1).executor": "Run",
+    "Kotest.PasswordValidatorShould: when the validation level is low return false if.executor": "Run",
+    "Kotest.PasswordValidatorShould: when the validation level is low return true if (1).executor": "Run",
+    "Kotest.PasswordValidatorShould: when the validation level is low return true if.executor": "Run",
     "Kotest.PasswordValidatorShould: when the validation level is medium return false if.executor": "Run",
+    "Kotest.PasswordValidatorShould: when the validation level is medium return true if.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Tati/proyectos/Kata-PasswordValidator"
+    "last_opened_file_path": "C:/Users/Tati/proyectos/kata-kotlin-bolsas-2",
+    "settings.editor.selected.configurable": "actions.on.save"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.PasswordValidatorShould (1)">
-    <configuration name="PasswordValidatorShould (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.PasswordRuleShould">
+    <configuration name="PasswordRuleShould" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -98,7 +147,31 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.kata.PasswordValidatorShould&quot;" />
+            <option value="&quot;com.kata.PasswordRuleShould&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="PasswordShould" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.kata.PasswordShould&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -110,21 +183,6 @@
       <method v="2" />
     </configuration>
     <configuration name="PasswordValidatorShould: contains less than 8 characters (1)" type="ioKotest" factoryName="Kotest" temporary="true" defaultName="singleModule">
-      <module name="Kata-PasswordValidator.test" />
-      <option name="jrePath" value="" />
-      <option name="jrePathEnabled" value="false" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" value="$MODULE_WORKING_DIR$" />
-      <option name="programParameters" value="" />
-      <option name="specName" value="com.kata.PasswordValidatorShould" />
-      <option name="testPath" value="when the validation level is low return false if -- contains less than 8 characters" />
-      <option name="packageName" value="" />
-      <option name="vmparams" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PasswordValidatorShould: contains less than 8 characters" type="ioKotest" factoryName="Kotest" temporary="true" defaultName="singleModule">
       <module name="Kata-PasswordValidator.test" />
       <option name="jrePath" value="" />
       <option name="jrePathEnabled" value="false" />
@@ -171,11 +229,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.PasswordValidatorShould (1)" />
+        <item itemvalue="Gradle.PasswordRuleShould" />
+        <item itemvalue="Gradle.PasswordShould" />
         <item itemvalue="Kotest.PasswordValidatorShould: when the validation level is medium return false if" />
-        <item itemvalue="Kotest.PasswordValidatorShould: contains less than 8 characters (1)" />
-        <item itemvalue="Kotest.PasswordValidatorShould: contains less than 8 characters" />
         <item itemvalue="Kotest.PasswordValidatorShould: return true if (2)" />
+        <item itemvalue="Kotest.PasswordValidatorShould: contains less than 8 characters (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -195,6 +253,30 @@
       <option name="presentableId" value="Default" />
       <updated>1712925165946</updated>
     </task>
+    <task id="LOCAL-00001" summary="changes">
+      <option name="closed" value="true" />
+      <created>1713799872602</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713799872602</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes" />
   </component>
 </project>
